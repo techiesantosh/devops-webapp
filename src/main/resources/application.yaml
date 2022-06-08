@@ -1,0 +1,19 @@
+server:
+  error:
+    path: /error
+    whitelabel:
+      enabled: 'false'
+  port: ${port:8089}
+spring:
+  thymeleaf:
+    enabled: 'true'
+    prefix: classpath:/templates/
+    cache: 'false'
+    suffix: .html
+  application:
+    name: Devops Lab
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
